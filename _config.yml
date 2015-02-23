@@ -1,20 +1,32 @@
 # Site settings
-title: vando's blog
-# email: your-email@domain.com
-# description: > # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://van.do" # the base hostname & protocol for your site
+title:              "vando's blog"
+author:             Facundo Bianco
+description:        "Another geek blog and related stuff"
+url:                "http://van.do"
+baseurl:            ""
 
-# footer
-copyright: Except where otherwise noted, all content is licensed under CC-BY-SA
-powered: Thanks to FreeDNS and github.io
+# Google analytics
+google_analytics:   "UA-60019948-1"
 
-# SocialNets
-twitter_username: vando
-github_username:  vando
+# Optional features
+animated:           false
+show_related_posts: false
+show_post_footers:  false
+
+# Disqus post comments
+# (leave blank to disable Disqus)
+disqus_shortname:   vandosblog
+
+# Social icons
+show_social_icons:  true
+github_username:    vando
+twitter_username:   vando
 
 # Build settings
-markdown: kramdown
+markdown:           redcarpet
+redcarpet:
+  extensions:       ['smart', 'tables', 'with_toc_data']
+permalink:          /:title/
+paginate:           7
+sass:
+  compressed:       true
