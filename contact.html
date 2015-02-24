@@ -1,0 +1,16 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+---
+
+<div class="py2">
+  <form action="https://formspree.io/ping@van.do" method="POST" class="form-stacked form-light">
+    <input type="text" name="_replyto" class="input mobile-block" placeholder="Your email" />
+    <input type="hidden" name="_subject" value="New email from your blog" />
+    <textarea type="text" name="content" class="input mobile-block" rows="7" placeholder="What would you like to say?"></textarea>
+    <input type="hidden" name="_next" value="{{ site.baseurl }}/thanku/" />
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="submit" class="button button-blue button-big mobile-block" value="Send" />
+  </form>
+</div>
