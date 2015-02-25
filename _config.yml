@@ -25,7 +25,7 @@ twitter_username:   vando
 # Build settings
 markdown:           redcarpet
 redcarpet:
-  extensions:       ['smart', 'tables', 'with_toc_data']
+  extensions:       ['smart', 'tables', 'with_toc_data', 'footnotes']
 permalink:          /:title/
 paginate:           7
 sass:
