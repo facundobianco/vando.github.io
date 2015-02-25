@@ -3,4 +3,32 @@
         * add short URL
 	* 'share it' buttons
     -->
+    Share this  
+    <a class="fa-stack fa-1x" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>	
+    </a>
+    <a class="fa-stack fa-1x" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=vando">
+        <i class="fa fa-circle fa-stack-2x"></i>
+	<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+    </a>
+    <a class="fa-stack fa-1x" href="https://www.reddit.com/submit?title={{ page.title }}&url={{ site.url }}{{ page.url }}">
+        <i class="fa fa-circle fa-stack-2x"></i>
+	<i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
+    </a>
+    <a class="fa-stack fa-1x" href="https://news.ycombinator.com/submitlink?t={{ page.title }}&u={{ site.url }}{{ page.url }}">
+        <i class="fa fa-circle fa-stack-2x"></i>
+	<i class="fa fa-hacker-news fa-stack-1x fa-inverse"></i>
+    </a>
+    <a class="fa-stack fa-1x" href="https://plus.google.com/share?t={{ page.title }}&url={{ site.url }}{{ page.url }}">
+        <i class="fa fa-circle fa-stack-2x"></i>
+	<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+    </a>
+    <!--
+    <a class="fa fa-facebook-square" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"></a>
+    <a class="fa fa-twitter-square" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via=vando"></a>
+    <a class="fa fa-reddit-square" href="https://www.reddit.com/submit?title={{ page.title }}&url={{ site.url }}{{ page.url }}"></a>
+    <a class="fa fa-hacker-news fa-circle" href="https://news.ycombinator.com/submitlink?t={{ page.title }}&u={{ site.url }}{{ page.url }}"></a>
+    <a class="fa fa-google-plus-square fa-circle" href="https://plus.google.com/share?t={{ page.title }}&url={{ site.url }}{{ page.url }}"></a>
+    -->
 </div>
