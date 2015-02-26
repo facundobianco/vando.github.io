@@ -4,17 +4,13 @@
       {% if paginator.page == 2 %}
         <a class="pagination-item" href="{{ site.baseurl }}/">Newer</a>
       {% else %}
-        <a class="pagination-item" href="{{ site.baseurl }}/page{{paginator.previous_page}}/">Newer</a>
+        <a class="pagination-item" href="{{ site.baseurl }}/page{{paginator.previous_page}}/"><i class="fa fa-angle-left fa-fw"></i>Newer</a>
       {% endif %}
-    {% else %}
-      <span class="pagination-item disabled">Newer</span>
     {% endif %}
   </div>
   <div class="right">
     {% if paginator.next_page %}
-      <a class="pagination-item" href="{{ site.baseurl }}/page{{paginator.next_page}}/">Older</a>
-    {% else %}
-      <span class="pagination-item disabled">Older</span>
+      <a class="pagination-item" href="{{ site.baseurl }}/page{{paginator.next_page}}/">Older<i class="fa fa-chevron-right fa-fw"></i></a>
     {% endif %}
   </div>
 </div>
