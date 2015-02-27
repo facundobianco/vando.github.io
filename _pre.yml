@@ -1,0 +1,9 @@
+# PREPROD settings
+# Useful if you want to test your site without things 
+# that work on PROD enviroments.
+#
+# $> jekyll serve --config _config.yml,_pre.yml
+
+url:                "http://127.0.0.1:4000"
+google_analytics:   
+disqus_shortname:   
