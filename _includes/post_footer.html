@@ -2,8 +2,8 @@
     <!-- todo:
         * add short URL
     -->
-    {% capture url2share %}{{ site.url }}{{ page.url }}{% endcapture %}
-    Share this  
+    {% capture url2share %}{{ site.url | append: page.url }}{% endcapture %}
+    Share it on 
     <a class="fa-stack fa-1x" href="https://www.facebook.com/sharer/sharer.php?u={{ url2share }}">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>	
