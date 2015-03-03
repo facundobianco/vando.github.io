@@ -189,7 +189,8 @@ Y también agregar al archivo `.profile` de la cuenta que corra
 rTorrent, si utiliza tmux
 
 ```sh
-[[ "$RTORRENT" ]] && tmux new -s rtorrent -A "/usr/bin/rtorrent -o http_capath=/etc/ssl/certs"
+rtorrent(){ tmux new -s rtorrent -A "/usr/bin/rtorrent -o http_capath=/etc/ssl/certs" ; }
+[[ "$RTORRENT" ]] && rtorrent
 
 ```
 
