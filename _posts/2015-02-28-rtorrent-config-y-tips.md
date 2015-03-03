@@ -168,17 +168,21 @@ ssh mac "cat > /home/vando/spool/mail/torrents/new/`date +%s.%y%m%d_1.mac`"
 
 #### rTorrent remoto
 
-Tengo un home server (srvr0) al cual accedo desde Internet por SSH y
+Tengo un home server (`srvr0`) al cual accedo desde Internet por SSH y
 dentro de él utilizo mutt e irssi pero rTorrent esta en otro equipo
-(srvr1) que solo permite conecciones SSH por LAN.
+(`srvr1`) que solo permite conecciones SSH por LAN.
 
-Dentro de srvr0 esta el alias
+Para ello configuré que cuando lanzo rTorrent en el server `srvr0`
+este se contecte por SSH a `srvr1` y se inicie rTorrent o haga un
+*reattached* del mismo.
+
+Dentro de `srvr0` esta el alias
 
 ```sh
 alias rtorrent='RTORRENT=1 ssh -o SendEnv=RTORRENT rtorrent'
 ```
 
-Y dentro de srvr1 hay que agregar al archivo `/etc/ssh/sshd_config`
+Y dentro de `srvr1` hay que agregar al archivo `/etc/ssh/sshd_config`
 
 ```sh
 PermitUserEnvironment yes
