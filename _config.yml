@@ -28,5 +28,6 @@ redcarpet:
   extensions:       ['smart', 'tables', 'with_toc_data', 'footnotes', 'autolink']
 permalink:          /:title/
 paginate:           7
+paginate_path:      /page:num/
 sass:
   compressed:       true
