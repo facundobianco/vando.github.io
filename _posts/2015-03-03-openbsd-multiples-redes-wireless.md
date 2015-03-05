@@ -22,12 +22,21 @@ abiertas o WPA y opciones de dirección IP y para la placa wireless.
 Primero, hay que agregar las siguientes líneas al archivo
 `/etc/netstart`
 
-```sh
-# Create hostname.if(5) file for wireless device.
-if [ -f /etc/rc.wireless ]
-then
-       . /etc/rc.wireless
-fi
+```diff
+--- /usr/src/etc/netstart       Wed Aug  1 21:21:27 2007
++++ /etc/netstart               Thu Dec 20 15:22:18 2007
+@@ -2,6 +2,11 @@
+ #
+ #      $OpenBSD: netstart,v 1.116 2007/08/02 03:19:10 david Exp $
+
++# Create hostname.if(5) file for wireless device.
++if [ -f /etc/rc.wireless ]; then
++       . /etc/rc.wireless
++fi
++
+ # Strip comments (and leading/trailing whitespace if IFS is set)
+ # from a file and spew to stdout
+ stripcom() {
 ```
 
 El archivo `rc.wireless`
@@ -56,7 +65,7 @@ done
 ```
 
 Y el archivo `rc.wireless.conf` donde se configuran los diferentes
-*profiles* (es a modo de ejemplo)
+*profiles*
 
 ```sh
 #!/bin/sh

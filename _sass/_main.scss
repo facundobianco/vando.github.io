@@ -14,7 +14,8 @@
 */
 
 body {
-  font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+  // font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: Helvetica, sans-serif;
 }
 
 html, body {
@@ -137,6 +138,10 @@ table {
 
 .related-post-title {
   border-bottom: thin solid #f3f3f3;
+}
+
+.post-content {
+  text-align: justify;
 }
 
 .posts {
@@ -270,9 +275,9 @@ code {
 
 pre {
   padding: 1.125em;
-  font-size: 1.125rem;
+  font-size: 0.84rem;
   line-height: 1.11;
-  overflow-x: scroll;
+  overflow-x: auto;
   margin-bottom: 0.88em;
 }
 
@@ -345,7 +350,7 @@ h6,
 
   .h1,
   h1 {
-    font-size: 3.250rem;
+    font-size: 3.6rem;
   }
 
   .h2,
@@ -366,8 +371,8 @@ h6,
   .p,
   p,
   li {
-    font-size: 1.25rem;
-    line-height: 1.8;
+    font-size: 1rem;
+    line-height: 1.2;
   }
 
   .small {
@@ -447,22 +452,22 @@ h6,
 @media screen and (min-width: 64em) {
   .h1,
   h1 {
-    font-size: 4.498rem;
+    font-size: 2.4rem;
   }
 
   .h2,
   h2 {
-    font-size: 3.18rem;
+    font-size: 2rem;
   }
 
   .h3,
   h3 {
-    font-size: 2.249rem;
+    font-size: 1.7rem;
   }
 
   .h4,
   h4 {
-    font-size: 1.591rem;
+    font-size: 1.2rem;
   }
 
   .posts .post-meta {
