@@ -28,15 +28,27 @@ El script es
 ```sh
 #!/bin/sh
 
+# This script runs on OpenWRT and uses FreeDNS service
+# https://freedns.afraid.org
+
+TOKEN=
+DOMAIN=
+DNS=${DNS:-208.67.222.222}
+
+if [ -z "$TOKEN" ] || [ -z "$DOMAIN" ]
+then
+    exit 1
+fi
+
 IP=`uci -P /var/state get network.wan.ipaddr`
 
 if [ "$IP" != `uci -P /var/state get network.wan.lastipaddr` ]
 then
-   wget -qO /dev/null http://freedns.afraid.org/dynamic/update.php?YOUR_TOKEN
+   wget -qO /dev/null ${TOKEN}
 
-   # Got freeDNS my new IP? Ask to openDNS!
+   # Got freeDNS my new IP? Ask to a DNS provider
    sleep 10
-   if [ `nslookup your_domain.com 208.67.222.222 | sed -n '${s/.*: \(.*\) .*/\1/p}'` == "$IP" ]
+   if [ `nslookup ${DOMAIN} ${DNS} | sed -n 's/.*: \([^ ]*\) .*/\1/p'` == "$IP" ]
    then
       date "+%Y%m%d %R  $IP" >> /var/log/ip.log
       uci -P /var/state set network.wan.lastipaddr="$IP"
@@ -69,7 +81,7 @@ fi
 
 El script se encuentra en [mi repositorio de
 scripts](https://github.com/vando/scripts) con el nombre de
-*freedns.sh* (dentro del directorio *misc*).
+*freedns* (dentro del directorio *openWRT*).
 
 
 [WRT54G]: https://en.wikipedia.org/wiki/Linksys_WRT54G_series#WRT54G
