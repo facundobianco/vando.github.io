@@ -6,9 +6,9 @@ summary:  Uno de los mejores clientes en la terminal para torrents.
 category: cli
 ---
 
-[rTorrent][] es uno de los mejores clientes en la terminal para
-manejar tus torrents. Lo utilizo hace muchos años y hace un tiempo
-incorporó el manejo de magnet links.
+[rTorrent][http://rakshasa.github.io/rtorrent/] es uno de los mejores 
+clientes en la terminal para manejar tus torrents. Lo utilizo hace 
+muchos años y hace un tiempo incorporó el manejo de magnet links.
 
 Si nunca lo utilizaste te recomiendo leer la [rTorrent User
 Guide](https://github.com/rakshasa/rtorrent/wiki/User-Guide).
@@ -179,7 +179,7 @@ este se contecte por SSH a `srvr1` y se inicie rTorrent o haga un
 Dentro de `srvr0` esta el alias
 
 ```sh
-alias rtorrent='RTORRENT=1 ssh -o SendEnv=RTORRENT rtorrent'
+alias rtorrent='RTORRENT=1 ssh -o SendEnv=RTORRENT srvr1'
 ```
 
 Y dentro de `srvr1` hay que agregar al archivo `/etc/ssh/sshd_config`
@@ -204,4 +204,21 @@ o si utiliza screen
 rtorrent(){ screen -rmS rtorrent 2> /dev/null ; [[ "$?" -gt 0 ]] && screen -mS rtorrent /usr/bin/rtorrent -o http_capath=/etc/ssl/certs ; }
 [[ "$RTORRENT" ]] && rtorrent
 ```
-[rTorrent]: http://rakshasa.github.io/rtorrent/
+### Lanzar rTorrent como servicio
+
+La idea la tomé de un [gist](https://gist.github.com/Grogdor/a78796740d8a668d0158)
+para crear un *rc.d* en freeBSD. Pero se puede hacer de manera sencilla con 
+`rc.local` y `rc.local_shutdown`.
+
+Para lanzar rTorrent al inicio del sistema agregar en `rc.local`
+
+```sh
+su - user -c "tmux new -s rtorrent -d \"/usr/bin/rtorrent -o http_capath=/etc/ssl/certs\""
+```
+
+Y para finalizar rTorrent cuando se apaga el equipo agregar en
+`rc.local_shutdown`
+
+```sh
+su - user -c "tmux send-keys -t rtorrent C-q"
+```
