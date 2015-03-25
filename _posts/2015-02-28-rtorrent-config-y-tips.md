@@ -204,21 +204,33 @@ o si utiliza screen
 rtorrent(){ screen -rmS rtorrent 2> /dev/null ; [[ "$?" -gt 0 ]] && screen -mS rtorrent /usr/bin/rtorrent -o http_capath=/etc/ssl/certs ; }
 [[ "$RTORRENT" ]] && rtorrent
 ```
-### Lanzar rTorrent como servicio
+#### Lanzar rTorrent como servicio
 
 La idea la tomé de un [gist](https://gist.github.com/Grogdor/a78796740d8a668d0158)
 para crear un *rc.d* en freeBSD. Pero se puede hacer de manera sencilla con 
 `rc.local` y `rc.local_shutdown`.
 
-Para lanzar rTorrent al inicio del sistema agregar en `rc.local`
+Con tmux para lanzar rTorrent al inicio del sistema agregar en `rc.local`
 
 ```sh
-su - user -c "tmux new -s rtorrent -d \"/usr/bin/rtorrent -o http_capath=/etc/ssl/certs\""
+su - ${USER} -c "tmux new -s rtorrent -d \"/usr/bin/rtorrent -o http_capath=/etc/ssl/certs\""
 ```
 
-Y para finalizar rTorrent cuando se apaga el equipo agregar en
+y para finalizar rTorrent cuando se apaga el equipo agregar en
 `rc.local_shutdown`
 
 ```sh
-su - user -c "tmux send-keys -t rtorrent C-q"
+su - ${USER} -c "tmux send-keys -t rtorrent C-q"
+```
+
+En cambio con screen en `rc.local`
+
+```sh
+su - ${USER} -c "screen -dmS rtorrent /usr/bin/rtorrent -o http_capath=/etc/ssl/certs"
+```
+
+y en `rc.local_shutdown`
+
+```sh
+su - ${USER} -c "kill -HUP `pgrep screen`  
 ```
