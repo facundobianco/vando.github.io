@@ -5,7 +5,7 @@ date:     2015-03-10
 summary:  >
     Un script en PHP para pfSense que monitorea los enlaces IPSec y 
     notifica si los mismos están caídos.
-tags: net
+tags: net script
 ---
 
 El inconveniente con los enlaces IPsec en

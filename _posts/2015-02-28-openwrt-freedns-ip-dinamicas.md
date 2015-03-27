@@ -6,7 +6,7 @@ summary: >
     Un script sencillo dentro de OpenWRT para actualizar nuestra 
     IP dinámica con FreeDNS. A diferencia de otros scripts yo utilizo 
     la herramienta uci.
-tags: net, cli
+tags: net script
 ---
 
 Los mejores router hogareños que he conocido son los Linksys

@@ -3,7 +3,7 @@ layout:     post
 title:      "OpenBSD: manejo de diferentes redes wireless"
 date:       2015-03-03
 summary:    Un script para manejar de forma inteligente las diferentes redes wireless con <code>/etc/netstart</code>.
-categories: openbsd wireless script
+tags: net script
 ---
 
 A diferencia de Linux donde wireless-tools únicamente soporta WEP (y
