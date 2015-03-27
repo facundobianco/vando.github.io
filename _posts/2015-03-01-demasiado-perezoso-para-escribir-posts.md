@@ -5,7 +5,7 @@ date:     2015-03-01
 summary:  >
     Un script para crear nuevas entradas en el blog y que luego es 
     abierto en nuestro editor preferido.
-category: cli script
+tags: cli script
 ---
 
 Te resulta cómodo utilizar
@@ -32,7 +32,7 @@ layout:   post
 title:    
 date:     2015-03-01
 summary:  
-category: 
+tags: 
 ---
 ```
 
@@ -59,7 +59,7 @@ layout:   post
 title:    
 date:     $DATE
 summary:  
-category: 
+tags: 
 ---
 " > "$FILE"
 

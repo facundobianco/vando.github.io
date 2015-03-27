@@ -22,6 +22,9 @@ show_social_icons:  true
 github_username:    vando
 twitter_username:   vando
 
+# tags
+tags:               ['cli', 'script', 'net']
+
 # Build settings
 markdown:           redcarpet
 redcarpet:

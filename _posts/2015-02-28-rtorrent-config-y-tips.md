@@ -3,7 +3,7 @@ layout:   post
 title:    "rTorrent: configuración y tips"
 date:     2015-02-28
 summary:  Uno de los mejores clientes en la terminal para torrents.
-category: cli
+tags: cli
 ---
 
 [rTorrent][http://rakshasa.github.io/rtorrent/] es uno de los mejores 

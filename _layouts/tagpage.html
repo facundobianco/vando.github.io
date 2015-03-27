@@ -1,0 +1,12 @@
+---
+# http://christianspecht.de/2014/10/25/separate-pages-per-tag-category-with-jekyll-without-plugins/
+layout: page
+---
+
+<ul>
+{% for post in site.tags[page.title] %}
+  <li>
+    <p>{{ post.date | date_to_string }} <i class="fa fa-angle-right fa-fw"></i> <a href="{{ post.url }}">{{ post.title }}</a><p>
+  </li>
+{% endfor %}
+</ul>
