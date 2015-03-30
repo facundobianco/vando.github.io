@@ -23,7 +23,7 @@ github_username:    vando
 twitter_username:   vando
 
 # tags
-tags:               ['cli', 'script', 'net']
+tags:               ['cli', 'script', 'net', 'x11']
 
 # Build settings
 markdown:           redcarpet
