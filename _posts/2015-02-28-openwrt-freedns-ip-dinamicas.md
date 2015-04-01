@@ -5,23 +5,24 @@ date:     2015-02-28
 summary: > 
     Un script sencillo dentro de OpenWRT para actualizar nuestra 
     IP dinámica con FreeDNS. A diferencia de otros scripts yo utilizo 
-    la herramienta uci.
+    la herramienta <code>uci</code>.
 tags: net script
 ---
 
 Los mejores router hogareños que he conocido son los Linksys
-[WRT54G][] (inclusive los que son versión >= 5.0 con la mitad de RAM y
-ROM) siempre y cuando corran [OpenWRT][].
+[WRT54G](https://en.wikipedia.org/wiki/Linksys_WRT54G_series#WRT54G)
+(inclusive los que son versión >= 5.0 con la mitad de RAM y 
+ROM) siempre y cuando corran [OpenWRT](http://wiki.openwrt.org/about/start).
 
-Si bien es cierto que [OpenWRT][] no ofrece en su configuración alguna
-forma de actualizar nuestra IP externa -como sí lo hace
-[DD-WRT][]- esto se puede solucionar con un sencillo script.
+Si bien es cierto que OpenWRT no ofrece en su configuración alguna
+forma de actualizar nuestra IP externa -como sí lo hace DD-WRT- esto
+se puede solucionar con un sencillo script.
 
 A diferencia de otros scripts que hay en la red yo utilizo la
 herramienta [`uci`](http://wiki.openwrt.org/doc/uci) para consultar
-y/o guardar la nueva IP. Y me sirvo de [FreeDNS][] como servidor DNS
-(funciona excelente y ofrece gratis la administración de hasta cinco
-domain names).
+y/o guardar la nueva IP. Y me sirvo de [FreeDNS](http://freedns.afraid.org) 
+como servidor DNS (funciona excelente y ofrece gratis la 
+administración de hasta cinco domain names).
 
 El script es 
 
@@ -60,7 +61,7 @@ Nótese que antes de actualizar la variable `network.wan.lastipaddr` se
 guarda en un *log* la fecha y hora y la IP que ha sido asignada; esto
 se puede quitar.
 
-Por último agregamos al *crond* de [OpenWRT][]
+Por último agregamos al *crond* de OpenWRT
 
 ```sh
 */30 * * * * /usr/local/bin/freedns
@@ -79,12 +80,6 @@ then
 fi
 ```
 
-El script se encuentra en [mi repositorio de
-scripts](https://github.com/vando/scripts) con el nombre de
-*freedns* (dentro del directorio *openWRT*).
+El script se encuentra en mi repositorio
+[scripts/openWRT](https://github.com/vando/scripts/tree/master/openWRT).
 
-
-[WRT54G]: https://en.wikipedia.org/wiki/Linksys_WRT54G_series#WRT54G
-[OpenWRT]: http://wiki.openwrt.org/about/start
-[DD-WRT]: http://www.dd-wrt.com/site/index
-[FreeDNS]: http://freedns.afraid.org

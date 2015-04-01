@@ -6,7 +6,7 @@ summary:  Uno de los mejores clientes en la terminal para torrents.
 tags: cli
 ---
 
-[rTorrent][http://rakshasa.github.io/rtorrent/] es uno de los mejores 
+[rTorrent](http://rakshasa.github.io/rtorrent/) es uno de los mejores 
 clientes en la terminal para manejar tus torrents. Lo utilizo hace 
 muchos años y hace un tiempo incorporó el manejo de magnet links.
 
@@ -53,8 +53,8 @@ check_hash         = yes
 
 ```
 
-El mismo se encuentra en [mi repositorio de archivos de
-configuración](https://github.com/vando/dotfiles) dentro de *ncurses/rtorrent*.
+El mismo se encuentra en mi repositorio
+[dotfiles/ncurses/rtorrent](https://github.com/vando/dotfiles/tree/master/ncurses/rtorrent).
 
 ### Tips
 
