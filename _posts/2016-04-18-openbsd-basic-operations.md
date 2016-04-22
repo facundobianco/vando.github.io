@@ -47,7 +47,15 @@ sysctl hw.disknames
 The `c` partition is the entire disk, from the first sector to the last. 
 
 ```
-disklabel /dev/wd0c
+disklabel -h wd0
+```
+
+### Remote package repository
+
+Add this line in `/etc/pkg.conf` file
+
+```
+installpath = http://ftp3.usa.openbsd.org/pub/OpenBSD/%c/packages/%a/
 ```
 
 ### Mount a FAT pendrive
