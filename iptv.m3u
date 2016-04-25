@@ -1,0 +1,62 @@
+#EXTM3U
+
+#EXTINF:0 group-title="CD Cd Aut Bs As",Eco TV - 1220 TV - CABA AM - CD Cd Aut Bs As
+https://www.youtube.com/embed/acPID-oFEhU?autoplay=1
+#EXTINF:0 group-title="CD Cd Aut Bs As",Vorterix Rock - 92.1 TV - CABA FM - CD Cd Aut Bs As
+rtmp://r20057.smi.vmf.edge-apps.net/magma-apps/vorterix_video1
+#EXTINF:0 group-title="CD Cd Aut Bs As",Argentinima - CTV - CABA TV Cable - CD Cd Aut Bs As
+http://stream-03.sv6.dailymotion.com/01/dm/1/x3s8tgx/live.isml/events(live-1460714751)/live-audio=128000-video=1200000.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",DW - CTV - CABA TV Cable - CD Cd Aut Bs As
+http://www.metafilegenerator.de/DWelle/tv-latinoamerica/ios/master.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",Magazine - CTV - CABA TV Cable - CD Cd Aut Bs As
+http://200.42.92.141/live/mgzntv/mgzntv/playlist.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",Q Musica - CTV - CABA TV Cable - CD Cd Aut Bs As
+mms://streamqm.uigc.net/qmusica
+#EXTINF:0 group-title="CD Cd Aut Bs As",TN Todo Noticias - CTV - CABA TV Cable - CD Cd Aut Bs As
+rtsp://stream.tn.com.ar/live/tnhd1
+#EXTINF:0 group-title="CD Cd Aut Bs As",TyC Sports - CTV - CABA TV Cable - CD Cd Aut Bs As
+http://kalseglive-a.akamaihd.net/dc-1/m/ny-live-publish1/kLive/smil:1_3j5azqiu_all.smil/playlist.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",LRL456 Orbe 21 - 21.1 TV - CABA TV TDA - CD Cd Aut Bs As
+http://urtmpkal-f.akamaihd.net/i/1b6mj17sk_1@308700/master.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",Encuentro - 22.1 TV - CABA TV TDA - CD Cd Aut Bs As
+http://lsdencuentrohls-lh.akamaihd.net/i/encuentrohls_1@96967/master.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",Paka Paka - 22.2 TV - CABA TV TDA - CD Cd Aut Bs As
+http://lsdencuentrohls-lh.akamaihd.net/i/PKPKHLS_1@198010/master.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",TaTeTi - 22.3 TV - CABA TV TDA - CD Cd Aut Bs As
+http://ionlive1-lh.akamaihd.net/i/tateti_1@126174/master.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",TECtv - 22.5 TV - CABA TV TDA - CD Cd Aut Bs As
+http://tectvhls-lh.akamaihd.net/i/tectvHLS_1@334993/master.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",LS82 TVP - 23.2 TV - CABA TV TDA - CD Cd Aut Bs As
+http://live-edge01.telecentro.net.ar/live/smil:tvp.smil/chunklist_w825854892_b2628000_sleng.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",DTV Diputados - 23.4 TV - CABA TV TDA - CD Cd Aut Bs As
+http://lsdhcdnhls-lh.akamaihd.net/i/hcdnarsatHLS_2@301805/master.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",DxTV - 24.1 TV - CABA TV TDA - CD Cd Aut Bs As
+http://186.33.227.199/DXTV/smil:DXTV.smil/chunklist_w788509661_b800000_slesp.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",Viajar - 24.4 TV - CABA TV TDA - CD Cd Aut Bs As
+http://eventshd-lh.akamaihd.net/i/viajar_1@168433/index_814_av-p.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",Telesur - 25.3 TV - CABA TV TDA - CD Cd Aut Bs As
+http://cdna.telesur.ultrabase.net/mbliveMain/ngrp:mblive_all/playlist.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",G360 - 25.4 TV - CABA TV TDA - CD Cd Aut Bs As
+http://lsd360tvhls-lh.akamaihd.net/i/360TVHLS_1@197877/master.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",RT - 25.5 TV - CABA TV TDA - CD Cd Aut Bs As
+http://rt-a.akamaihd.net/ch_02@325606/master.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",Canal 26 HD - 26.1 TV - CABA TV TDA - CD Cd Aut Bs As
+http://live-edge01.telecentro.net.ar/live/26hd-720/playlist.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",Canal 26 SD - 26.1 TV - CABA TV TDA - CD Cd Aut Bs As
+http://live-edge01.telecentro.net.ar/live/26hd-360/playlist.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",Telemax - 26.2 TV - CABA TV TDA - CD Cd Aut Bs As
+http://live-edge01.telecentro.net.ar/live/tlx-480/playlist.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",C5N HD - 27.1 TV - CABA TV TDA - CD Cd Aut Bs As
+http://server6.stweb.tv/c5n/live/playlist.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",One TV - 27.2 TV - CABA TV TDA - CD Cd Aut Bs As
+http://server5.stweb.tv/radioone/live/playlist.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",LS85 El Trece - 33.1 TV - CABA TV TDA - CD Cd Aut Bs As
+http://200.42.92.141/live13/13tv/13tv1/playlist.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",ACUA Mayor - 34.3 TV - CABA TV TDA - CD Cd Aut Bs As
+https://www.youtube.com/embed/4L8Lqj6rxYE?autoplay=1
+#EXTINF:0 group-title="CD Cd Aut Bs As",LS83 Canal 9 - 35.1 TV - CABA TV TDA - CD Cd Aut Bs As
+http://dd65nd24m61wg.cloudfront.net/livec9/smil:C9.smil/playlist.m3u8
+#EXTINF:0 group-title="CD Cd Aut Bs As",ACUA Federal - 35.3 TV - CABA TV TDA - CD Cd Aut Bs As
+https://www.youtube.com/embed/NvkTJSiiiac?autoplay=1
+#EXTINF:0 group-title="CD Cd Aut Bs As",A24 - 36.3 TV - CABA TV TDA - CD Cd Aut Bs As
+https://www.youtube.com/embed/NCfc_zDzLD0?autoplay=1
