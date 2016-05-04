@@ -26,7 +26,7 @@ twitter_username:   vando
 tags:               ['cli', 'script', 'net', 'x11']
 
 # Build settings
-markdown:           redcarpet
+markdown:           kramdown
 redcarpet:
   extensions:       ['smart', 'tables', 'with_toc_data', 'footnotes', 'autolink']
 permalink:          /:title/
