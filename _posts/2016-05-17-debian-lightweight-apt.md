@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    Debian: A lightweight APT
+title:    'Debian: A lightweight APT'
 date:     2016-05-17
 summary:  A few tips for APT
 category: cli

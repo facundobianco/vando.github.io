@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    Docker: Delete your unused containers
+title:    'Docker: Delete your unused containers'
 date:     2016-05-05
 summary:  Just what the title said.
 category: cli
