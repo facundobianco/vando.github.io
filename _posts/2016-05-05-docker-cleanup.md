@@ -12,7 +12,7 @@ category: cli
 docker rm `docker ps -aq -f status=paused -f status=exited -f status=dead`
 ```
 
-### Remove images with name "<none>"
+### Remove images with name "\<none\>"
 
 ```
 docker rmi -f `docker images -q --filter "dangling=true"
