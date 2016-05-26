@@ -3,7 +3,7 @@ layout:   post
 title:    IPtv Simple for Kodi 15.2 in Debian Jessie
 date:     2016-05-25
 summary:  Create a PVR IPtv Simple deb file for Debian 8 
-tags:     misc
+tags:     misc, mediacenter
 ---
 
 I've been using [OpenELEC for Raspberry Pi v2](http://wiki.openelec.tv/index.php/Raspberry_Pi)
