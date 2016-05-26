@@ -17,11 +17,12 @@ MAINTAINER @vando
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libsdl2-dev libboost-system-dev libboost-filesystem-dev libboost-date-time-dev \
-    libboost-locale-dev libfreeimage-dev libfreetype6-dev libeigen3-dev libcurl4-openssl-dev \
-    libasound2-dev libgl1-mesa-dev build-essential cmake fonts-droid git openssl ca-certificates
+    libboost-locale-dev libfreeimage-dev libfreetype6-dev libeigen3-dev \
+    libcurl4-openssl-dev libasound2-dev libgl1-mesa-dev build-essential cmake \
+    fonts-droid git openssl ca-certificates
     
 RUN git clone --depth=1 --branch=master https://github.com/Aloshi/EmulationStation.git
-RUN cd EmulationStation && cmake -DCMAKE_INSTALL_PREFIX=. -&& make 
+RUN cd EmulationStation && cmake -DCMAKE_INSTALL_PREFIX=. && make 
 ```
 
 And then you can copy the binary `emulationstation` from container to host
