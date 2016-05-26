@@ -12,7 +12,7 @@ but it buffered all the time.
 So I moved to my desktop and I installed Kodi 15.2 [from Jessie Backports](https://packages.debian.org/jessie-backports/kodi)
 but I can't find the package PVR IPtv Simple. For some reason there isn't a 
 package for Jessie Backports (in the official repository, it's for [kodi 16.1 (stretch)](https://packages.debian.org/stretch/kodi-pvr-iptvsimple)
-and on [Debian Multimedia](https://www.deb-multimedia.org/dists/stable/main/binary-amd64/package/kodi) its for Kodi 14.2).
+and on [Debian Multimedia](https://www.deb-multimedia.org/dists/stable/main/binary-amd64/package/kodi) it's for Kodi 14.2).
 
 I made a PVR IPtv Simple deb file for Debian 8.
 
