@@ -38,7 +38,7 @@ ES="/path/to/rebuiled/emulationstation"
 
 wget -qO - http://emulationstation.org/downloads/releases/emulationstation_amd64_latest.deb | ar x -
 mkdir DEBIAN tar -zxC DEBIAN -f control.tar.gz
-sed -i '/^Depends/s/1.54.0/1.55.0/g' DEBIAN/control
+sed -e '/^Depends/s/1.54.0/1.55.0/g' -e 's/$/, libboost-date-time1.55.0/' -i DEBIAN/control
 tar Jxf data.tar.xz && rm control.tar.gz data.tar.xz  debian-binary
 mv ${ES} usr/bin
 find usr/ -type f -printf '%P ' | xargs md5sum > DEBIAN/md5sums
@@ -56,7 +56,7 @@ Otherwise, you can [download it](http://devio.us/~vando/pkg/emulationstation_2.0
 from my `public_html` in Devio.us and its MD5 is
 
 ```
-04f4ec6a1402c8fba378d9607f6b3090  emulationstation_2.0.1a-1_amd64.deb
+cabc13d890b3cc0508a139721562beb7  emulationstation_2.0.1a-1_amd64.deb
 ```
 
 If you have a Kodi mediacenter I recommend you to install the 
