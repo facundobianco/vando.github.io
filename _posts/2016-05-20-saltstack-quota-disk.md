@@ -2,26 +2,25 @@
 layout:   post
 title:    Manage quota disks with SaltStack
 date:     2016-05-20
-summary:  I created a SaltStack instructions for managing groups and their respective quotas. 
-tags:     devops
+summary:  I created a SaltStack instructions for managing users and their respective quotas. 
+tags:     devops, sysadmin
 ---
 
 I have a few servers where the root partition (OS) has the home
 directory. This is a problem when users move and/or create new data
 and the OS partition loses free space. And I mean all free space.
 
-I created a SaltStack instructions for managing groups and their
-respective quotas. 
+I created a SaltStack instructions for managing users and their
+respective quotas.
 
-This instructions were made following two ideas:
+This instructions configure blocks (hard and soft) and not inodes.
 
-* First, groups over single users because it's more easy for managing.
-* Second, this configures blocks and not inodes.
+I use SaltStack >= 2015.8.3 (Beryllium).
 
 ### SaltStack states
 
 Keep in mind that state {% raw %}`quota_assign_{{ group }}`{% endraw %} accepts "*none*" as
-valid argument when nobody has as quota's primary group. 
+valid argument when user doesn't exist. 
 
 {% raw %}
     quota:
@@ -30,18 +29,19 @@ valid argument when nobody has as quota's primary group.
     quota_remount:
       mount.mounted:
         - name: /
-        - device: {{ salt['cmd.run']('sed -n \'/[^#] \/ /s/ .*//p\' /etc/fstab') }}
+        - device: {{ salt['cmd.run']('sed -n "/[^#][[:space:]]\/[[:space:]]/s/[[:space:]].*//p" /etc/fstab') }}
         - fstype: ext4
         - opts:
           - errors=remount-ro
-          - grpquota
+          - usrjquota=aquota.user
+          - jqfmt=vfsv1
         - dump: 0
         - pass_num: 1
-
+    
     quota_check:
       cmd.run:
         - name: quotacheck -vgum /
-        - creates: /aquota.group
+        - creates: /aquota.user
         - require:
           - mount: quota_remount
 
@@ -49,59 +49,59 @@ valid argument when nobody has as quota's primary group.
       quota.mode:
         - name: /
         - mode: on
-        - quotatype: group
+        - quotatype: user
         - require:
           - cmd: quota_check
 
-    {% for group, args in pillar['quota'].iteritems() %}
-    {% if 'softblock' in args %}{% set softblock = args['softblock'] %}{% else %}{% set softblock = '0' %}{% endif %}
-    {% if 'hardblock' in args %}{% set hardblock = args['hardblock'] %}{% else %}{% set hardblock = '0' %}{% endif %}
-    quota_assign_{{ group }}:
+    {% for user, args in pillar.get('qusers', {}).iteritems() %}
+    quota_assign_{{ user }}:
       cmd.run:
-        - unless: quota -g {{ group }} | grep -q '{{ softblock }} {{ hardblock }}\|none'
-        - name: setquota -g {{ group }} {{ softblock }} {{ hardblock }} 0 0 /
+        - unless: if id {{ user }} > /dev/null ; then quota -u {{ user }} --hide-device | awk '{ print $2, $3}' | grep -q '{{ args['soft'] }} {{ args['hard'] }}' ; fi
+        - name: setquota -u {{ user }} {{ args['soft'] }} {{ args['hard'] }} 0 0 /
     {% endfor %}
 {% endraw %}
 
 ### SaltStack pillar
 
-You should define in `/srv/pillar` usergroups and their limits (in KB), in the
-following example I configured two groups
+You should define in `/srv/pillar` users and their limits in KB, ie for
+converting 20 GB to KB
+
+```
+GB=20 ; echo $(( ${GB}*1024*1024 ))
+```
+
+A pillar example for users with different limits
 
 {% raw %}
-    quota:
-      labs:
-        hardblock: 2048
-      devs:
-        softblock: 2048
-        hardblock: 2560
+    qusers:
+      dev00:
+        soft: 15728640
+	hard: 20971520
+      dev01:
+        soft: 26214400
+	hard: 31457280
+      labs00:
+        soft: 5242880
+        hard: 7340032
 {% endraw %}
 
-### Tips: using quotas for other paths
-
-Replace `quota_remount` and `quota_check` states by
+Or in the following example I configured three groups
 
 {% raw %}
-    {% set mountpoint = salt['pillar.get']('mountpoint:device', '/') %}
-
-    quota_fstab:
-      cmd.run:
-        - unless: grep ' {{ mountpoint }} ' /etc/fstab | grep -q grpquota
-        - name: awk '/[^#] \{{ mountpoint }} /{ sub(/$/, ",grpquota", $4) }1' /etc/fstab > /tmp/fstab && mv /tmp/fstab /etc/fstab
-        - require:
-          - pkg: quota
-
-    quota_remount:
-      cmd.run:
-        - unless:  grep ' {{ mountpoint }} ' /proc/mounts | grep -q quota 
-        - name: mount -o remount {{ mountpoint }}
-        - require:
-          - cmd: quota_fstab
-
-    quota_check:
-      cmd.run:
-        - name: quotacheck -vgum {{ mountpoint }}
-        - creates: {{ mountpoint }}/aquota.group
-        - require:
-          - cmd: quota_remount
+    {% set devs = ['dev00','dev01','dev02'] %}
+    {% set labs = ['labs00','labs01'] %}
+    
+    qusers:
+      # devs
+      {% for user in devs %}
+      {{ user }}:
+        soft: 15728640
+        hard: 20971520
+      {% endfor %}
+      # labs
+      {% for user in labs %}
+      {{ user }}:
+        soft: 5242880
+        hard: 7340032
+      {% endfor %}
 {% endraw %}
