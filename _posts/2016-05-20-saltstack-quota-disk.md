@@ -56,8 +56,8 @@ returns "Clean" for users that don't exist on the host.
     {% for user, args in pillar.get('qusers', {}).iteritems() %}
     quota_assign_{{ user }}:
       cmd.run:
-        - unless: if id {{ user }} > /dev/null ; then quota -u {{ user }} --hide-device | awk '{ print $2, $3}' | grep -q '{{ args['soft'] }} {{ args['hard'] }}' ; fi
-        - name: setquota -u {{ user }} {{ args['soft'] }} {{ args['hard'] }} 0 0 /
+        - unless: if id {{ user }} > /dev/null ; then quota -u {{ user }} --hide-device | awk '{ print $2, $3}' | grep -q '{{ args['soft'] | default: "0" }} {{ args['hard'] | default: "0" }}' ; fi
+        - name: setquota -u {{ user }} {{ args['soft'] | default: "0" }} {{ args['hard'] | default: "0" }} 0 0 /
     {% endfor %}
 {% endraw %}
 
@@ -104,4 +104,11 @@ Or in the following example I configured three groups
         soft: 5242880
         hard: 7340032
       {% endfor %}
+{% endraw %}
+
+For removing user's quota limit
+
+{% raw %}
+    qusers:
+      dev00
 {% endraw %}
