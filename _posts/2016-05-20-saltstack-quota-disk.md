@@ -19,8 +19,8 @@ I use SaltStack >= 2015.8.3 (Beryllium).
 
 ### SaltStack states
 
-Keep in mind that state {% raw %}`quota_assign_{{ group }}`{% endraw %} accepts "*none*" as
-valid argument when user doesn't exist. 
+Keep in mind that state {% raw %}`quota_assign_{{ user }}`{% endraw %}
+returns "Clean" for users that don't exist on the host.
 
 {% raw %}
     quota:
