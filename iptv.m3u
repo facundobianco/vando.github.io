@@ -49,7 +49,7 @@ http://server6.stweb.tv/c5n/live/playlist.m3u8
 #EXTINF:0 group-title="CD Cd Aut Bs As",One TV
 http://server5.stweb.tv/radioone/live/playlist.m3u8
 #EXTINF:0 group-title="CD Cd Aut Bs As",LS85 El Trece
-http://200.42.92.141/live13/13tv/13tv1/playlist.m3u8
+rtsp://stream.eltrecetv.com.ar/live13/13tv/13tv1
 #EXTINF:0 group-title="CD Cd Aut Bs As",ACUA Mayor
 https://www.youtube.com/embed/4L8Lqj6rxYE?autoplay=1
 #EXTINF:0 group-title="CD Cd Aut Bs As",LS83 Canal 9
