@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/vando
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://van.do
+  * I am vando (https://keybase.io/vando) on keybase.
+  * I have a public key with fingerprint 8116 792E 9ADE 8A5E 1104  6837 CDF3 63B4 F22B 8141
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101d066b35ad27eb17ba9f7987be13f31b74f220466c5c128714f663ec319a9f7bf0a",
+            "fingerprint": "8116792e9ade8a5e11046837cdf363b4f22b8141",
+            "host": "keybase.io",
+            "key_id": "cdf363b4f22b8141",
+            "kid": "0101d066b35ad27eb17ba9f7987be13f31b74f220466c5c128714f663ec319a9f7bf0a",
+            "uid": "42f5f43112c71368480aa4d0496aec19",
+            "username": "vando"
+        },
+        "service": {
+            "hostname": "van.do",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1484942995,
+    "expire_in": 157680000,
+    "prev": "3cf3d34430e01256d4fe2270384c3160261362afb1b9431dfba8f0168cb3f593",
+    "seqno": 2,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtUm1QVFUYXpZQPssCIiqDLn0gINxz7937sZMEuBEULiMWmAzu3o9z4cayd9ld
+tozQUAK/cDecVmiJQQmDjJkoDCVEGk1Rx8AxwHRQY2IYInIGlcmhse5lavrTz86f
+M+c9z/O8z/PO6wnz12j9Lt7me+YTq9P9Lsxwmo3brZ2VCCcLWxB9JVIKly5oEaDD
+aSqVBESPoAAFAkqSHK5jBYyCHKA4lhEphqY4CHARBxxFiBiGEiTJ63iA0RQgRJLE
+IY8DRkVyIsoiSYgoWYuh3WaXrE5FlgaApBgMMqwAaVYHAVAEaJziBREncU5V5GhA
+AIVYIjtUhmKOYx0wWZKVmvIwLdn7D/z/7LtiSY7ARJ1I4ABgPAVwkiZolGUJASUY
+koU8YFSgA9qtbBlU0C7WKshIVRKilFwSD9WpqjH+/U4W1Bg2u+yUedmi1EqcTpte
+pTi32FTMW5Az/c02cZJVUKanEFzQ7pBkK6IHCpJ3SqocIGiCITCG0SUh8G2bZIcm
+SUXoKJJGlaO2gS5FEudFXMAJAkchCjAdKRgJEWIYheI0oYQmUYxUomGsyAGOUbIK
+IsfSIgpImudwUcfgiBqo3CojekzxyRYrmg6p2Mo6K+wQqQrepX3yAY2fVrMsQKvu
+lSY4aMU/yxYztULT/Ouz4Zdj0135A0ej9tUPfmFpCztzqmC+N+TL3ypiHsrI/aCp
+a/aH0A3lM2l9hd2pj+T1vrFY+/rOOz92r7RN01MGpi1r4vEX3PVpq+I8sjv1m6Zl
+lp27F1vXDpFeb/SRxoFgpvRUltvccfXRoeW1oQ1jldX5n1w9iW+N1M4gGwKPn3Ag
+A+xCZOaLxzsXAt+8cPirmIbWuU2jXQ3tUYF7ln96qPrhIR8ROTne03eyXy/0Dkfk
+Dbc0L7y749VLX98nWxJ7w438fEhdYXz65pvXtQXd0ddrzPtXn1kz/dT5vXtdWW1S
+fWj/wdFrt+TD3u/NeF+KJmV2Twk6mAl+lofDjzq6Btzb+59byA4fG/m80FORfe+c
+4enm2HWrOhvtvqryzT3lfx7wP/HK5L6WFG7qsfVnPVLne5v6RvURtTcm7jCtSWm7
+bhblFF0pjf/uwPvdlvXPpNRFg94Pt9mbjReL3lk9+aBcUXLjiZ6NRUPz9+aK5scN
+YW3CjpLLntGXvHl/3NUu/nQ/evfg7faabDnnvDfgbr2pLMHTcuj5WflSXPVE08e+
+CMccWZdgjhh5ufuXrIaE3wO2GhO8ebnHjmQMh5YeW/lZR1lO1MRY4reBhtdOtzf6
+1hwMcgddCSnIyI8zr6073RXaXDOiyYz39z+3fzQb5sbO8cnXtt1a19jxkVGfOm0y
++Jw+s2X87F8=
+=bNrB
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/vando
+
+==================================================================
