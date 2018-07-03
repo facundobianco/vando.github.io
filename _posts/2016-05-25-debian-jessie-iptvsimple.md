@@ -53,10 +53,3 @@ And you'll get this file:
 ```
 kodi-pvr-iptvsimple_2.4.0+git20160518-1_amd64.deb
 ```
-
-Otherwise, you can [download it](http://devio.us/~vando/pkg/kodi-pvr-iptvsimple_2.4.0+git20160518-1_amd64.deb) 
-from my `public_html` in Devio.us and its MD5 is
-
-```
-37816afa3ea1cde414f79b24eb03f353  kodi-pvr-iptvsimple_2.4.0+git20160518-1_amd64.deb
-```
