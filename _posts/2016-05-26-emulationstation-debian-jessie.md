@@ -52,12 +52,5 @@ And you'll get this file:
 emulationstation_2.0.1a-1_amd64.deb
 ```
 
-Otherwise, you can [download it](http://devio.us/~vando/pkg/emulationstation_2.0.1a-1_amd64.deb)
-from my `public_html` in Devio.us and its MD5 is
-
-```
-cabc13d890b3cc0508a139721562beb7  emulationstation_2.0.1a-1_amd64.deb
-```
-
 If you have a Kodi mediacenter I recommend you to install the 
 [plugin that launches EmulationStation](https://github.com/sdt/kodi-emulationstation-launcher).
